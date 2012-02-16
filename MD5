@@ -1,0 +1,11 @@
+9b6105dbae2eb8c563c8378e2a41806c *DESCRIPTION
+731018cde1a49bc3e80945ac95b89de5 *NAMESPACE
+9aa09bbdd183d259661c1ad280493417 *R/boundeval.R
+960378e58ad6dc023fed460e2e95508c *R/generate_sigma.R
+8880dfabfbc660ab1253886be6d90e07 *R/mm.R
+117ced7972c0beabdc76c5325bb01abd *R/mm_morefuns.R
+778587ea30aad9a0ae9fff7782799212 *R/prox.R
+5e32a8a8e362053aa21c7c6db7ed9070 *man/GenerateCliquesCovariance.Rd
+288f7a32110489daadc7c6364ea096dd *man/ProxADMM.Rd
+5025dbcfb64b6fb5635fc274e245a230 *man/spcov-package.Rd
+3014d92240851be23a56e1167bd2186a *man/spcov.Rd

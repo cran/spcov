@@ -1,0 +1,34 @@
+\name{spcov-package}
+\alias{spcov-package}
+\docType{package}
+\title{Sparse Estimation of a Covariance Matrix}
+\description{
+  Performs the majorize-minimize algorithm described in
+  
+  Bien, J., and Tibshirani, R. (2011), "Sparse Estimation of a
+  Covariance Matrix," Biometrika. 98(4). 807--820.
+  
+  Generalized gradient descent is used to minimize each majorizer.
+}
+\details{
+\tabular{ll}{
+Package: \tab spcov\cr
+Type: \tab Package\cr
+Version: \tab 1.0\cr
+Date: \tab 2012-02-16\cr
+License: \tab GPL-2\cr
+LazyLoad: \tab yes\cr
+}
+See the function \code{spcov}.
+}
+\author{
+Jacob Bien and Rob Tibshirani
+
+Maintainer: Jacob Bien <jbien@stanford.edu>
+}
+\references{
+  Bien, J., and Tibshirani, R. (2011), "Sparse Estimation of a
+  Covariance Matrix," Biometrika. 98(4). 807--820.
+  }
+\keyword{ multivariate }
+\seealso{\code{\link{spcov}}}

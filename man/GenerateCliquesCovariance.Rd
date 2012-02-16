@@ -1,0 +1,33 @@
+\name{GenerateCliquesCovariance}
+\alias{GenerateCliquesCovariance}
+\title{Generate a block diagonal covariance matrix}
+\description{
+This function is included in the package so that it can be used in the
+example code provided in \code{\link{spcov}}.
+}
+\usage{
+GenerateCliquesCovariance(ncliques, cliquesize, theta)
+}
+\arguments{
+  \item{ncliques}{number of blocks}
+  \item{cliquesize}{size of each block}
+  \item{theta}{magnitude of non-zeros}
+}
+\details{This function generates a block diagonal positive definite
+  matrix with randomly-signed, non-zero elements.  A shift is added to
+  the diagonal of the matrix so that its condition number equals
+  \code{p}, the number of variables.}
+\value{
+  \item{Sigma}{the covariance matrix}
+  \item{A}{symmetric square root of \code{Sigma}}
+  \item{shift}{how much the eigenvalues were shifted.  See details.}
+}
+\references{
+Bien, J., and Tibshirani, R. (2011), "Sparse Estimation of a Covariance Matrix," accepted for publication in Biometrika.
+}
+\author{
+Jacob Bien and Rob Tibshirani
+}
+
+\keyword{ multivariate }
+
