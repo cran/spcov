@@ -14,8 +14,8 @@
 \tabular{ll}{
 Package: \tab spcov\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2012-02-16\cr
+Version: \tab 1.01\cr
+Date: \tab 2012-03-04\cr
 License: \tab GPL-2\cr
 LazyLoad: \tab yes\cr
 }

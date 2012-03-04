@@ -4,14 +4,14 @@ h <- function(x, a) log(x) + a / x
 
 dhdx <- function(x, a) (1 - a / x) / x
 
-FindSolutions <- function(a, c, tol=1e-10, max.iter=1e3, trace=1) {
-  # performs newton's method to find x s.t. h(x, a) = c.
+FindMinSolution <- function(a, c, tol=1e-10, max.iter=1e3, trace=1) {
+  # performs newton's method to find the smaller x s.t. h(x, a) = c.
   if (h(a, a) > c)
     stop("No solution!")
   if (h(a, a) == c)
     return(a)
 
-  # there are two solutions:
+  # find solution that is < a:
   x.min <- 0.1 * a
   for (i in seq(max.iter)) {
     if (trace > 1)
@@ -27,19 +27,7 @@ FindSolutions <- function(a, c, tol=1e-10, max.iter=1e3, trace=1) {
       break
     }
   }
-  x.max <- 1.1 * a
-  for (i in seq(max.iter)) {
-    if (trace > 1)
-      cat("h(", x.max, ", a) = ", h(x.max, a), fill=T)
-    x.max <- x.max - (h(x.max, a) - c) / dhdx(x.max, a)
-    if ( abs(h(x.max, a) - c) < tol & h(x.max, a) >= c) {
-      if (trace > 0)
-        cat("Eval-bound converged in ", i, "steps to ", x.max, fill=T)
-      break
-    }
-  }
-
-  c(x.min, x.max)
+  x.min
 }
 
 ComputeDelta <- function(S, Lambda, Sigma.tilde=NULL, trace=1) {
@@ -57,5 +45,5 @@ ComputeDelta <- function(S, Lambda, Sigma.tilde=NULL, trace=1) {
   minev <- min(eigen(S)$val)
   c <- f.tilde - (p - 1) * (log(minev) + 1)
   
-  min(FindSolutions(a=minev, c=c, trace=trace))
+  FindMinSolution(a=minev, c=c, trace=trace)
 }
